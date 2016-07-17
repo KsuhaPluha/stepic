@@ -1,0 +1,7 @@
+cmake_minimum_required (VERSION 2.6) 
+add_executable(main main.cpp)
+add_executable(stop stop.cpp)
+add_executable(final final.cpp)
+# add_library(main pthread)
+find_package (Threads)
+target_link_libraries (final ${CMAKE_THREAD_LIBS_INIT})
